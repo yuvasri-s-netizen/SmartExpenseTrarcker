@@ -1,0 +1,49 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+.container { max-width: 1000px; margin: auto; padding: 30px 18px; }
+header { text-align: center; margin-bottom: 25px; }
+header h1 { margin-bottom: 8px; }
+header p { color: #667085; }
+.summary {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 16px; margin-bottom: 20px;
+}
+.card, .panel {
+  background: white; border-radius: 12px; padding: 20px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.07);
+}
+.card span { display: block; color: #667085; margin-bottom: 8px; }
+.card strong { font-size: 26px; }
+h2 { margin-top: 0; font-size: 20px; }
+.grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+}
+label { font-weight: 600; font-size: 14px; }
+input, select {
+  display: block; width: 100%; margin-top: 7px; padding: 11px;
+  border: 1px solid #d0d5dd; border-radius: 8px; font-size: 14px;
+}
+button {
+  margin-top: 18px; padding: 11px 18px; border: 0; border-radius: 8px;
+  cursor: pointer; background: #111827; color: white; font-weight: 600;
+}
+.list-head { display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+.list-head select { width: 190px; margin-top: 0; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+th, td { padding: 12px 8px; border-bottom: 1px solid #eaecf0; text-align: left; }
+th { font-size: 13px; color: #667085; }
+.delete {
+  margin: 0; padding: 7px 10px; background: #dc2626;
+}
+.empty { padding: 25px 0; text-align: center; color: #667085; }
+@media (max-width: 650px) {
+  .summary, .grid { grid-template-columns: 1fr; }
+  .list-head { align-items: flex-start; flex-direction: column; }
+  .list-head select { width: 100%; }
+}
